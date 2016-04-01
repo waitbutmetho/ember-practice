@@ -1,1 +1,8 @@
 {{outlet}}
+{{question-tile question=model editQuestion="editQuestion"}}
+<br>
+{{new-answer question=model saveAnswer="saveAnswer"}}
+{{#each model.answers as |answer|}}
+  <h5>{{answer.author}}</h5>
+  <h3>{{answer.content}}</h3>
+{{/each}}

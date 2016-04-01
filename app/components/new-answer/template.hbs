@@ -1,0 +1,10 @@
+{{yield}}
+{{#if answer}}
+  <form>
+    <label for="content">Answer:</label>{{input value=content id="content"}}
+    <label for="author">Author:</label>{{input value=author id="author"}}
+    <button type="submit" class="btn btn-lg btn-danger" {{action 'saveAnswer'}}>Answer</button>
+  </form>
+{{else}}
+  <button type="button" class="btn btn-lg btn-danger" {{action 'newQuestion'}}>New Answer</button>
+{{/if}}

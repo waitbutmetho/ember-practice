@@ -1,0 +1,9 @@
+{{yield}}
+{{#if formVisible}}
+  {{edit-question question=question editQuestion="editQuestion"}}
+{{else}}
+<h2>{{question.content}}</h2>
+<h3>-{{question.author}}</h3>
+<h5>{{question.notes}}</h5>
+  <button type="button" class="btn btn-sm btn-danger" {{action 'showEditForm'}}>Edit Question</button>
+{{/if}}

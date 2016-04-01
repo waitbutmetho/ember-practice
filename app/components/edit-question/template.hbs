@@ -1,0 +1,7 @@
+{{yield}}
+<form>
+  <label for="content">Question:</label>{{input value=question.content id="content"}}
+  <label for="author">Author:</label>{{input value=question.author id="author"}}
+  <label for="notes">Description:</label>{{input value=question.notes id="notes"}}
+  <button type="submit" class="btn btn-sm btn-danger" {{action 'editQuestion' question}}>Save Changes</button>
+</form>
