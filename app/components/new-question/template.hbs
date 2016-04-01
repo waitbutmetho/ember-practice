@@ -1,0 +1,14 @@
+{{yield}}
+{{#if formVisible}}
+  <form>
+    <label for="content">Question:</label>{{input value=content id="content"}}
+
+    <label for="author">Author:</label>{{input value=author id="author"}}
+
+    <label for="notes">Notes:</label>{{input value=notes id="notes"}}
+
+    <button type="submit" class="btn btn-lg btn-danger" {{action 'saveQuestion'}}>Save Question</button>
+  </form>
+{{else}}
+  <button type="button" class="btn btn-lg btn-danger" {{action 'showQuestionForm'}}>New Question</button>
+{{/if}}

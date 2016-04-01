@@ -1,0 +1,8 @@
+{{outlet}}
+{{new-question saveQuestion="saveQuestion"}}
+{{#each model as |question|}}
+{{#link-to 'question' question.id}}
+  <h6>{{question.content}}</h6>
+  <h6>-{{question.author}}</h6>
+  {{/link-to}}
+{{/each}}
